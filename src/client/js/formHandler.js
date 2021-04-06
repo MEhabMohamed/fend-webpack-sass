@@ -23,7 +23,7 @@ function handleSubmit(event) {
       };
       performAction();
 }
-const getInfo = async () => {
+const getInfo = async () => { // add your own key after "key=" to active, get it free from https://api.ipinfodb.com
     const res = await fetch('https://api.ipinfodb.com/v3/ip-city/?key=1758a53a2bdb70a26a0166581f51ae76d2a527fd75ddf1a2379abf1357ca70cd&format=json')
       try {
           const data = await res.json();
