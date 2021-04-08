@@ -1,6 +1,5 @@
 var path = require('path')
 const express = require('express')
-/*const mockAPIResponse = require('./mockAPI.js')*/
 projectData = {};
 
 const app = express()
@@ -35,4 +34,5 @@ app.post('/add', function(req, res) {
     projectData.irony = req.body.irony;
     projectData.score_tag = req.body.score_tag;
     projectData.subjectivity = req.body.subjectivity;
+    projectData.name = req.body.name;
 })

@@ -2,6 +2,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Merriweather', serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    background: linear-gradient(0deg, grey 0%, black 100%);
 }
 
 main {
@@ -11,4 +16,12 @@ main {
 section {
     max-width: 800px;
     margin: 50px auto;
+}
+
+:root {
+    --mainColor: rgb(29, 118, 134);
+  }
+
+#results {
+    font-size: 18px;
 }

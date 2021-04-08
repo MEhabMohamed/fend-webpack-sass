@@ -1,7 +1,8 @@
-const path = require('path')
-const webpack = require('webpack')
-const HtmlWebPackPlugin = require("html-webpack-plugin")
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     entry: './src/client/index.js',
@@ -12,7 +13,6 @@ module.exports = {
     devServer: {
         setup(app) {
             projectData = {};
-            /*app.use(express.static('dist'))*/
 
             const bodyParser = require('body-parser');
             app.use(bodyParser.urlencoded({ extended: false }));
@@ -20,10 +20,6 @@ module.exports = {
             
             const cors = require('cors');
             app.use(cors());
-            
-            /*app.get('/', function (req, res) {
-                res.sendFile('dist/index.html')
-            })*/
 
             app.get('/gather', function (req, res) {
                 res.send(projectData)
@@ -35,6 +31,7 @@ module.exports = {
                 projectData.irony = req.body.irony;
                 projectData.score_tag = req.body.score_tag;
                 projectData.subjectivity = req.body.subjectivity;
+                projectData.name = req.body.name;
             })
         },
         port: 8080,
@@ -67,6 +64,7 @@ module.exports = {
             // Automatically remove all unused webpack assets on rebuild
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
-        })
+        }),
+        new Dotenv(),
     ]
 }

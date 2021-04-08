@@ -14,18 +14,25 @@
 
         <header>
             <div class="">
-                Logo
+                <img src='udacity.png' alt='Logo'>
             </div>
             <div class="">
-                navigation
+                Navigation
             </div>
         </header>
 
         <main>
+            <section id="color-container">
+                Choose a theme color: 
+                <input type="color" id="choose-theme-color">
+            </section>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                    <P>Please Enter Your Name:</P>
+                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name!">
+                    <P>Here Enter the text for Natural Language Processing NLP:</P>
+                    <input id="form" type="text" name="input" value="" onblur="onBlur()" placeholder="Enter your text here!">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             <section>
 

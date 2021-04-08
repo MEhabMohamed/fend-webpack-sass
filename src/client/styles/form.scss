@@ -8,5 +8,16 @@ input {
     padding: 5px 20px;
     width: 100%;
     line-height: 16px;
-    margin: 10px 0;
+    margin: 10px -20px;
+    background:  linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.25)
+      )
+    var(--mainColor);
+}
+
+#choose-theme-color {
+    max-width: 5%;
+    margin-left: 10px;
 }
