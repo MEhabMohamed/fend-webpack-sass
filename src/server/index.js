@@ -30,7 +30,9 @@ app.get('/gather', function (req, res) {
 })
 
 app.post('/add', function(req, res) {
-    projectData.name = req.body.name;
-    projectData.city = req.body.city;
-    projectData.country = req.body.country;
+    projectData.agreement = req.body.agreement;
+    projectData.confidence = req.body.confidence;
+    projectData.irony = req.body.irony;
+    projectData.score_tag = req.body.score_tag;
+    projectData.subjectivity = req.body.subjectivity;
 })
