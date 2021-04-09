@@ -3,11 +3,6 @@
     <head>
         <meta charset="utf-8">
         <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
     </head>
 
     <body>
@@ -24,7 +19,7 @@
         <main>
             <section id="color-container">
                 Choose a theme color: 
-                <input onclick="return Client.themeColor()" type="color" id="choose-theme-color">
+                <input type="color" id="choose-theme-color">
             </section>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
@@ -45,6 +40,28 @@
         <footer>
             <p>This is a footer</p>
         </footer>
-        
+        <script>
+            document.documentElement.style.setProperty("--mainColor", localStorage.getItem("userThemeColor"));
+            let colorInput = document.querySelector("#choose-theme-color");
+                
+            colorInput.addEventListener("change", function() {
+                
+            // Theme the site!
+            document.documentElement.style.setProperty("--mainColor", this.value);
+            
+            // Save the value for next time page is visited.
+            localStorage.setItem("userThemeColor", this.value);
+                
+            });
+        </script>
     </body>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+          // Use the window load event to keep the page load performant
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+          });
+        }
+    </script>
 </html>

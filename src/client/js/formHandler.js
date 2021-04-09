@@ -1,5 +1,5 @@
 function handleSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
 
     // check what text was put into the form field
     let name = document.getElementById('name').value;
@@ -40,8 +40,14 @@ function handleSubmit(event) {
           console.log('error', error)
         }
       };
+      let digits = /(\d{1})/;
+      if (formText.match(digits) || name.match(digits)){
+        alert("Invalid input!, only text accepted");
+      }else{
       performAction();
-    }
+      document.getElementById('form').scrollIntoView();
+    };
+    };
 
   const postData = async (url='' , data = {}) =>{
       const response = await fetch(url, {
