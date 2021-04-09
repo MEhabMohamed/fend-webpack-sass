@@ -6,7 +6,7 @@ body {
     color: #fff;
     font-weight: bold;
     font-size: 24px;
-    background: linear-gradient(0deg, grey 0%, black 100%);
+    background: linear-gradient(0deg, rgb(36, 36, 36) 0%, black 100%);
 }
 
 main {
@@ -19,7 +19,7 @@ section {
 }
 
 :root {
-    --mainColor: rgb(29, 118, 134);
+    --mainColor: rgb(23, 94, 130);
   }
 
 #results {

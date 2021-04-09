@@ -69,25 +69,12 @@ function handleSubmit(event) {
       const score_tag = data.score_tag;
       const subjectivity = data.subjectivity;
       const myName = data.name.slice(0,1).toUpperCase() + data.name.slice(1);
-      document.getElementById('results').innerHTML = (`<br>Welcome ${myName}!<br>The following information is your text's reflection:<br>Agreement: ${agreement}<br>Confidence: ${confidence}<br>Irony: ${irony}<br>Subjectivity: ${subjectivity}<br>Positive/Negative Language: ${score_tag}`);
+      document.getElementById('results').innerHTML = 
+      (`<br>Welcome ${myName}!<br>The following information is your text's reflection:<br><br>Agreement: ${agreement}<br>Confidence: ${confidence}<br>Irony: ${irony}<br>Subjectivity: ${subjectivity}<br>Positive/Negative Language: ${score_tag}`);
     }
     catch (error) {
       console.log("error", error);
     }
   };
-
-document.documentElement.style.setProperty("--mainColor", localStorage.getItem("userThemeColor"));
-
-var colorInput = document.querySelector("#choose-theme-color");
-
-colorInput.addEventListener("change", function() {
-  
-  // Theme the site!
-  document.documentElement.style.setProperty("--mainColor", this.value);
-  
-  // Save the value for next time page is visited.
-  localStorage.setItem("userThemeColor", this.value);
-  
-});
 
 export { handleSubmit }

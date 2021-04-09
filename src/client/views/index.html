@@ -24,7 +24,7 @@
         <main>
             <section id="color-container">
                 Choose a theme color: 
-                <input type="color" id="choose-theme-color">
+                <input onclick="return Client.themeColor()" type="color" id="choose-theme-color">
             </section>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
@@ -32,9 +32,9 @@
                     <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name!">
                     <P>Here Enter the text for Natural Language Processing NLP:</P>
                     <input id="form" type="text" name="input" value="" onblur="onBlur()" placeholder="Enter your text here!">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                    <button type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">Submit</button>
                 </form>
-            <section>
+            </section>
 
             <section>
                 <strong>Form Results:</strong>
@@ -45,6 +45,6 @@
         <footer>
             <p>This is a footer</p>
         </footer>
-
+        
     </body>
 </html>

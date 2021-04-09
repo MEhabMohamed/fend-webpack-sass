@@ -1,29 +1,24 @@
-# Webbpack Express Example App
+# Evaluate-news-NLP
 
-The goal of this repo is be an example of a basic but functional app built on Express and Webpack.
+This is a web app concerned by Natural Language Processing NPL, where
+it analyzes texts for some considerations regarding positive or negative
+language, irony, subjectivity and some other outcomes related to judging
+the meaning and tone of voice behind that text.
 
-If you want to follow along, start from branch 0-initial-setup. Each branch in this project is a step along the path to creating a fully functional webpack setup. In each branch, there will be a documentation file that lists out the steps taken in that branch (each step is also roughly a git commit if you look at the history) which you can use as a checklist when setting up your own projects. 
+## What is contains
 
-## What we will cover
+On the web app you can find:
 
-We will cover:
+- A theme selector using your chosen color
+- An input for both the name and the text to be analyzed
+- Results section
 
-- Webpack entry point
-- Webpack output and dist folder
-- Webpack Loaders
-- Webpack Plugins
-- Webpack Mode
-- Tools for convenient Webpack development
+## Regarding functionality
 
-## Get Up and Running
+This web app is designed using webpack, with both development and production environments assigned.
 
-Fork this repo, then clone the branch of your choice from your forked repo down to your computer:
+It has webpack-dev-server defined to help modify easily.
 
-```
-git clone -- git@github.com:[your-user-name]/webpack-express.git --
-```
+NLP is analyzed using Meaningcloud API, you can get a free key to use it through https://www.meaningcloud.com/developer/sentiment-analysis.
 
-`cd` into your new folder and run:
-- ```npm install```
-- ```npm start``` to start the app
-- this app runs on localhost:8080, but you can of course edit that in server.js
+Last but not least, hope you enjoy it!
